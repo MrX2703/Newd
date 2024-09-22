@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Data Search & Download</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Search Excel Data</h1>
+
+    <!-- Upload Excel File -->
+    <input type="file" id="upload" accept=".xlsx, .xls" />
+
+    <!-- Search Box -->
+    <input type="text" id="search-input" placeholder="Search..." onkeyup="searchData()">
+
+    <!-- Table to Display Search Results -->
+    <table id="results-table">
+        <thead>
+            <tr id="table-header"></tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+
+    <!-- Button to Download Results as PDF -->
+    <button id="download-pdf" onclick="downloadPDF()">Download as PDF</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
